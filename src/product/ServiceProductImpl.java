@@ -25,7 +25,6 @@ public  class ServiceProductImpl implements Service {
                 .filter(s -> s.getDate().minusMonths(1).isAfter(LocalDate.now())).forEach(System.out::println);
         list.addAll(products);
 
-
     }
 
     @Override
@@ -45,16 +44,16 @@ public  class ServiceProductImpl implements Service {
     @Override
     public void checkToManager(List<Product> products) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println(ANSI_YELLOW + "Get your login and password" + ANSI_RESET);
+        System.out.println(ANSI_YELLOW + "Write ->login" + ANSI_RESET);
         String login = scanner.nextLine();
-        System.out.println(ANSI_YELLOW+"Write a password");
+        System.out.println(ANSI_YELLOW+"Write -> password");
         String password=scanner.nextLine();
         if(login.equals(manager.getLogin())&&password.equals(manager.getPassword())) {
             System.out.println(ANSI_GREEN+"WELCOME >"+ login+ANSI_GREEN);
             addProduct(products);
             uppDateProducts(products);
         }else {
-            throw new MyExceptioon("WRONG LOGIN AND PASSWORD");
+            throw new MyExceptioon("YOU AREN'T A MANAGER");
         }
 
 

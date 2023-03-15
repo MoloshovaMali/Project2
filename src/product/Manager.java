@@ -1,13 +1,8 @@
 package product;
 
 public class Manager {
-    private  String login;
-    private String password;
-
-    public Manager(String login, String password) {
-        this.login = login;
-        this.password = password;
-    }
+    private  String login="Malika";
+    private String password="2006";
 
     public Manager() {
     }

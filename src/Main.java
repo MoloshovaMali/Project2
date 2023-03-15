@@ -21,7 +21,7 @@ public class Main {
 
         ServiceProductImpl serviceProduct=new ServiceProductImpl();
         List<Product> list=new ArrayList<>();
-        list.add(new Fish(1,"FISH","TOIBOSS", LocalDate.of(2023,4,10)));
+        list.add(new Fish(1,"FISH","TOIBOSS", LocalDate.of(2023,3,10)));
         list.add(new Fish(2,"FISH2","TOISS", LocalDate.of(2023,4,20)));
         list.add(new Fish(3,"FISH3","TOIBOSS", LocalDate.of(2023,4,13)));
         list.add(new LambMeat(9,"LAMB.MEAT","TOIBOSS",LocalDate.of(2023,3,7)));
